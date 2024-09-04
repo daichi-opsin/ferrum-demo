@@ -1,0 +1,17 @@
+<style>
+  .preview {
+    width: 210mm;
+  }
+</style>
+
+<h1>PDF</h1>
+<%= form_with url: download_path, method: :get do |f| %>
+  <%= f.submit "PDF作成" %>
+<% end %>
+
+<h2>プレビュー</h2>
+<div class="preview">
+  <div><%= render partial: "pdf/header" %></div>
+  <div><%= render template: "pdf/sample" %></div>
+  <div><%= render partial: "pdf/footer" %></div>
+</div>
